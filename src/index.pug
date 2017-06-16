@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="styles.css")
+    link(href="https://fonts.googleapis.com/css?family=Quattrocento+.." rel="stylesheet")
+    title Document
+body 
+        header.site-header
+        nav.main-nav: .wrapper
+                 .main-nav__logo
+                    img.main-nav__logo--logo(src="./img/logo.png" alt="logo")
+                 mixin main-nav(imgURL, text)
+                    .main-nav__block
+                        img(src=imgURL)
+                        p.main-nav__textinfo= text
+                 +main-nav("./img/phone.png", "1-800-00-000-0000.")
+                 +main-nav("./img/map.png", "11301 West Olympic Boulevard.")
+                 +main-nav("./img/clock.png", "Mon-Fri 9:00-18:00.")
+
+                 .main-nav__menu-icon: .main-nav__menu-icon__middle
+
+        nav.main-menu: .wrapper
+                 ul.main-menu__list
+                    -var menuList=['Home','About','Servises','Barbers','Testimonials','Portfolio','Prices','Contacts'];
+                    -var menuLinks=['home','about','servises','barbers','testimonials','portfolio','prices','contacts'];
+                    -for (var i=0;i<8;i++)
+                        li: a.main-menu__link--shown(href=menuLinks)=menuList[i]
+        .site-header__greeting: .wrapper
+            .site-header__motto-container
+            h1.site-header__motto Welcome 
+                h1.site-header__motto to the 
+                h1.site-header__motto--brown barbershop
+                a(href="#").button.button--empty Make An Appointment
+                button.button__round--bgnone <
+                button.button__round--bg 
+                //- ul.site-header__list
+                //-     -var imgList= ['./img/1','./img/2','./img/3'];
+                //-     -for(var i=0; i<3;i++)
+                //-         li: img(src=imgList[i])
+        
+        section.about: .wrapper
+            h1.about__title About us
+            p.about__title-text Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+            p.about__title-text|accusantium doloremque laudantium, totam rem aperiam
+                mixin about(imageURL,title,text)
+                    .about__block
+                        img(src=imageURL)
+                        h3.about__title-block=title
+                        p.about__text=text
+            
+                +about('./img/comb.png',"New York's №1 Barbershop",'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam')
+                +about('./img/scissor.png',"Professionals Barbers",'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam') 
+                +about('./img/scissors.png',"Branded Products",'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam')
+        
+        section.stats: .wrapper 
+            .stats__stats-container
+                .stats__info-block
+                    h1.stats__number: span.count 2500
+                    h2.stats__info happy clients 
+                .stats__info-block
+                    h1.stats__number: span.count 300
+                    h2.stats__info coffee cups 
+                .stats__info-block
+                    h1.stats__number: span.count 120
+                    h2.stats__info barbers
+                .stats__info-block
+                    h1.stats__number: span.count 300
+                    h2.stats__info stores 
+                     
+        section.services: .wrapper
+            h1.services__title  Our services
+            p.services__title-text Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+            .services__container
+                .services__info-block--left
+                    .services__info-block
+                        img(src = './img/scissors.png').services__icon
+                        h1.services__title-block Hair cut
+                        p.services__text At vero eos accusamus et iusto odio dignissimos ducimus qui blandtitits praesentium voluptatum deleniti atque corruoti quoes
+                    .services__info-block
+                        img(src = './img/scissors.png').services__icon
+                        h1.services__title-block Hair wash
+                        p.services__text At vero eos accusamus et iusto odio dignissimos ducimus qui blandtitits praesentium voluptatum deleniti atque corruoti quoes
+                .services__info-block--right
+                    .services__info-block
+                        img(src = './img/scissors.png').services__icon
+                        h1.services__title-block Hair styling
+                        p.services__text At vero eos accusamus et iusto odio dignissimos ducimus qui blandtitits praesentium voluptatum deleniti atque corruoti quoes
+                    .services__info-block
+                        img(src = './img/scissors.png').services__icon
+                        h1.services__title-block Shave
+                        p.services__text At vero eos accusamus et iusto odio dignissimos ducimus qui blandtitits praesentium voluptatum deleniti atque corruoti quoes
+        
+        section.appointment: .wrapper
+            h1.appointment__title Make An appointment
+            p.appointment__text Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            .appointment__input-group
+                input(type='text' placeholder="Name").appointment__input
+                input(type='text' placeholder="Service").appointment__input
+                input(type='text' placeholder="Phone").appointment__input
+                input(type='text' placeholder="Barber").appointment__input
+                input(type='text' placeholder="E-mail").appointment__input
+                input(type='text' placeholder="E-mail").appointment__input
+                textarea(type='text' placeholder="Message").appointment__textarea
+                br
+                a(href='#').button.button--bg-fill Make An Appointment
+        
+        section.barbers: .wrapper
+            h1.barbers__title Our barbers
+            p.barbers__text Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            mixin barber(imgURL,title,text)
+                .barbers__block
+                    img(src=imgURL).barbers__img
+                    h2.barbers__title-block=title
+                    p.barbers__text-block=text
+            
+            +barber('./img/DG.png','Darrel Gibbs','Sed ut perspiciatis unde omnis iste natus error sit voluptateum accusantum')
+            +barber('./img/DG.png','David Clarke','Sed ut perspiciatis unde omnis iste natus error sit voluptateum accusantum')
+            +barber('./img/DG.png','Richard Owens','Sed ut perspiciatis unde omnis iste natus error sit voluptateum accusantum')
+                    
+        section.clients: .wrapper
+            h1.clients__title Our Clients say
+            p.clients__text Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium do oremque  laucantium totam rem aperiam
+            button.button__round--bgnone <
+            button.button__round--bg >
+            mixin client(iconURL,text)
+                .clients__block
+                    p.clients__say=text
+                    img(src=iconURL).clients__img
+            
+            +client('./img/GM.png','Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque l audantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur')
+        
+        section.gallery
+            h1.gallery__title Our Gallery
+            p.gallery__text Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium do oremque  laucantium totam rem aperiam
+            .gallery__image-wrapper
+                mixin gallery(imgURL)
+                    img(src=imgURL).gallery__img
+                    
+                +gallery('./img/DG.png')
+                +gallery('./img/DG.png')
+                +gallery('./img/DG.png')
+                +gallery('./img/DG.png')
+                +gallery('./img/DG.png')
+            .gallery__image-wrapper1
+                mixin gallery(imgURL)
+                    img(src=imgURL).gallery__img
+                +gallery('./img/DG.png')
+                +gallery('./img/DG.png')
+                +gallery('./img/DG.png')
+                +gallery('./img/DG.png')
+                +gallery('./img/DG.png')    
+
+        section.price
+            h1.price__title Our price
+            p.price__text Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium do oremque  laucantium totam rem aperiam         
+            .price__block
+                .price__gender-block 
+                    h1.price__gender-block__name Men
+                mixin table-item(itemName,itemPrice)
+                    tr.table-item
+                        td.table-item=itemName
+                        td.table-item=itemPrice
+                
+                +table-item('Hair cut','15$')
+                +table-item('Hair wash','12$')
+                +table-item('Hair styiling','20$')
+                +table-item('Face shave','15$')
+                +table-item('Head shave','15$')
+                +table-item('Head shave','15$')
+                    h1.price__appointment
+                .price__gender-block 
+                     h1.price__gender-block__name Woman
+                mixin table-item(itemName,itemPrice)
+                    tr.table-item
+                        td.table-item=itemName
+                        td.table-item=itemPrice
+                
+                +table-item('Hair cut','15$')
+                +table-item('Hair wash','12$')
+                +table-item('Hair styiling','20$')
+                +table-item('Face shave','15$')
+                +table-item('Head shave','15$')
+                +table-item('Head shave','15$')
+                     h1.price__appointment
+        
+        footer.site-footer: .wrapper
+            .site-footer__subscribe 
+                h1.site-footer__subscribe-title Subscribe
+                p.site-footer__subscribe-text At vero eos accusamus et iusto odio dignissimos doloremque qui blandtitits
+                input(type="text" placeholder="Your E-mail")
+                button.button--footer
+            .site-footer__schedule
+                h1.site-footer__schedule-title Working Hours
+                p.site-footer__schedule-text At vero eos accusamus et iusto odio dignissimos doloremque qui blandtitits
+                mixin footer-table-item(NameDay,time)
+                    tr 
+                        td.footer-table-item=NameDay
+                        td.footer-table-item=time
+
+                +footer-table-item('MON','9.00-18.00')
+                +footer-table-item('TUE','9.00-18.00')
+                +footer-table-item('WED','9.00-18.00')
+                +footer-table-item('THU','9.00-18.00')
+                +footer-table-item('FRI','9.00-16.00')
+                +footer-table-item('SAT','10.00-14.00')
+                +footer-table-item('SUN','Output')
+
+            .site-footer__blog
+                h1.site-footer__blog-title Latest From Blog
+                mixin blog(title,text)
+                    .site-footer__blog-container
+                        h3.site-footer__blog-container-title=title
+                        p.site-foote__blog-container-text=text 
+                +blog('Lorem ipsum dolore','Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium do oremque  laucantium totam rem aperiam')
+                +blog('Lorem ipsum dolore','Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium do oremque  laucantium totam rem aperiam ')
+
+            .site-footer__instagram
+                h1.site-footer__instagram-title Instagram
+                img(src="./img/1.png").site-footer__instagram-img 
+                img(src="./img/1.png").site-footer__instagram-img 
+                img(src="./img/1.png").site-footer__instagram-img 
+                img(src="./img/1.png").site-footer__instagram-img 
+                img(src="./img/1.png").site-footer__instagram-img 
+                img(src="./img/1.png").site-footer__instagram-img 
+
+            h1.site-footer__copyright Copyright 2017 Barber.All rights reserved
+            .site-footer__social-block
+                img(src="./img/1.png" alt="google plus").site-footer__social__img
+                img(src="./img/2.png" alt="twitter").site-footer__social__img
+                img(src="./img/3.png" alt="in").site-footer__social__img
+                img(src="./img/4.png" alt="fb").site-footer__social__img
+                
+        
+script(src="App.js")
+    

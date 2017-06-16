@@ -1,0 +1,52 @@
+.services {
+
+    background-image: url('./img/bg-services.png');
+    height: 950px;
+    background-position:center center;
+    background-size:cover;
+    background-repeat: no-repeat;  
+    margin-top:150px; 
+    position: relative;
+    // @include atSmall {
+    //     background-image:none; 
+    // }
+    &__container {
+        margin-top:130px; 
+        position: relative;
+    }
+
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: '$mainFont',sans-serif;
+
+       
+    }
+    &__title-text {
+        text-align: center;
+
+    }
+    &__info-block {
+        
+        display: block;
+        width: 250px;
+        // text-align: right;
+        margin-top:100px; 
+        &--left{
+            position: absolute;
+            left:50;
+        }
+        &--right  {
+            position: absolute;
+            right:0;
+        }
+    }
+    &__icon {
+        width: 50px;
+        height: 50px;
+    }
+    &__title-block  {
+        text-align: left;
+    }
+
+}

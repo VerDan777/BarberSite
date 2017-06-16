@@ -1,0 +1,24 @@
+.price {
+
+        margin-top:150px; 
+    &__title {
+        color:$addColor;
+        text-align: center;
+        font-size: 2rem;
+        display: block;
+        position: relative;
+        
+        &::before {
+            content:'';
+            display: inline-block;
+            padding-bottom: 15px;
+            border:1px solid $ginger;
+            border-bottom:$ginger;
+            position: absolute;
+            top:200px;
+            left: 35%;
+            width: 110px;
+            text-align: left;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.stats {
+    background-image: url('./img/bg_stats.png');
+    background-position: center center;
+    background-size:cover;
+    width: 100%;
+    // height: 200px;
+    margin-top: 150px;
+
+    &__stats-container {
+        display: inline-block;
+        margin-top: 50px; 
+        margin-left:50px;
+        vertical-align: middle;
+        line-height: 0.9;
+        text-align: center;
+       
+    }
+    &__info-block {
+        margin-right:45px;
+        margin-left:20px;
+        display: inline-block;
+        width: 200px;
+        height: 150px;
+        text-align: center;
+    }
+    &__number {
+        color:#995437;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        font-family: 'Vani',sans-serif;
+    }
+    &__info {
+        color:$white;
+        font-size: 1.5rem;
+        font-family: $mainFont;
+        text-transform: uppercase;
+        font-weight: 400;
+
+    }
+
+
+
+
+
+
+}

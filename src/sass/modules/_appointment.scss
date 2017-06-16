@@ -1,0 +1,101 @@
+.appointment {
+
+    position: relative;
+    background-image: url('./img/bg-appointment.png ');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 1000px;
+    width: 100%;
+
+
+    &__title {
+        padding-top:150px;
+         font-size: 2rem;
+         font-family: $mainFont;
+         font-weight: 200;
+         text-transform: uppercase;
+         color:$white;
+         text-align: center;
+
+             &::after {
+            display: inline-block;
+            content: '';
+            border-left:none;
+            border-right: none;
+            border-top: none;
+            border: 0.5px solid #985336;
+            width: 110px;
+           
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 200px;
+            left: 53%;
+            border: 0.5px solid #985336;
+            width: 110px;
+        }
+
+    } 
+    &__text {
+        color: #a8a8a8;
+        font-size: 1rem;
+        font-family: $mainFont;
+        font-weight: 300;
+        text-align: center;
+        text-transform: uppercase;
+        padding-top:50px;
+
+    }
+    &__input-group {
+        width: 750px;
+        margin: 150px auto;
+    }
+    &__input {
+        display: inline-block;
+        // -left:15px;
+        margin-right: 13px;
+        width: 360px;
+        border-bottom: 1px solid #c1c1c1;
+        border-top:none;
+        background: none;
+        border-left:none;
+        border-right: none;
+        outline: none;
+        text-align: left;
+        margin-bottom:60px; 
+        &:hover {
+            border-bottom-color: $white;  
+            transition: 0.25s ease;
+             color:$white;
+             font-family: $mainFont;
+        }
+        &:active {
+            color:$white;
+        }
+
+    }
+    &__textarea {
+        height: 180px;
+        background: none;
+        outline: none;
+        border-top:none;
+        border-left:none;
+        border-right: none;
+        border-bottom: 1px solid  #c1c1c1;
+        width: 100%;
+
+        &:hover {
+            color:$white;
+            font-family: $mainFont;
+
+        }
+        &:active {
+            color:$white;
+        }
+         &:focus {
+            color:$white;
+        }
+    }
+}

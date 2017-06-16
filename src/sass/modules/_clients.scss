@@ -1,0 +1,54 @@
+.clients {
+
+    background-image: url('./img/client.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 870px;
+    position: relative;
+
+
+    &__title {
+        text-align: center;
+        padding-top:150px;
+        font-size: 2rem;
+        font-family: $mainFont;
+        color:$white;
+        text-transform: uppercase;
+        font-weight: bold;
+
+    }
+    &__text {
+        color:#a1a1a1;
+        padding-left:300px;
+        padding-right: 300px;
+        padding-top: 70px;
+        padding-bottom: 120px;
+        text-align: center;
+        display: inline-block;
+        // width: 555px;
+
+    }
+    &__block {
+        margin-left: 15px;
+        margin-right: 15px;
+        display: inline-block;
+    }
+    &__img {
+        border-radius: 50%;
+        text-align: center;
+        display: inline-block;
+        margin: 50px 500px;
+
+    }
+    &__say {
+        text-align: center;
+        // width: 765px;
+        padding-left:250px;
+        padding-right: 250px;
+        color:#c0c0c0;
+        font-family: $mainFont;
+    }
+
+}

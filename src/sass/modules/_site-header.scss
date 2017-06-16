@@ -1,0 +1,46 @@
+.site-header {
+    position: relative;
+
+    &__greeting{
+    @include atDesktop {
+    max-width: 100%;
+    background-position: center center;
+    }
+    background-image: url('./img/main-bg.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 750px;
+    width: 100%;
+    position: relative;
+    z-index: -2;
+    }
+    &__motto-container {
+       
+        padding-top: 260px;
+        position: relative;
+        margin-left:50px;
+        margin-right:50px;
+        line-height: 0.9;
+    }
+    &__motto {
+        @include atDesktop {
+
+        font-size: 2.5rem;
+        }
+        font-size: 2.5rem;
+        margin-top: 1px;
+        color:$white;
+        text-transform: uppercase;
+        &--brown {
+            @include atDesktop {
+                font-size: 3.5rem;
+            }
+            color:#985336;
+            text-transform: uppercase;
+            font-size: 2.5rem;
+        }
+
+    }
+
+}

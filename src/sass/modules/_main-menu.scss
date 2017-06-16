@@ -1,0 +1,74 @@
+.main-menu {
+    background-color:rgba(121,121,121,0.8);
+    width:100%;
+    height: 74px;
+    position: relative;
+    margin-top:10px;
+    display: none;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display:block;
+
+    // box model
+    height: 100vh;
+    width: 100%;
+    padding-top: 150px;
+
+    // visual
+    background-color: rgba(black, 0.95);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    
+  
+
+   
+
+
+    &--shown {
+        // visual
+        opacity: 1;
+     
+    }
+
+
+    @include atTabletsLandscape {
+        // display:none;;
+    }
+
+    &__list {
+        padding:15px;
+        text-align: center;
+        // height: 100%;
+        li {
+        display: inline-block;
+        padding:10px 10px;
+        list-style-type: none;
+         
+            &:hover {
+               background-color:#85736c;
+               box-shadow: 0px 2px 0px #995437;
+            //    margin: 10px; 
+            }      
+        }
+        a {
+            text-decoration: none;
+            color:$white;
+            font-size: 1.1rem;
+            font-weight: 100;
+            text-transform: uppercase;
+            font-family: $mainFont;
+            padding:0px 5px;
+            &:hover {
+                background-color:#3e3a38;
+
+            }
+            &--shown {
+                color:red;
+            }
+        }
+    }
+
+  
+}
