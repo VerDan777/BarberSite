@@ -1,0 +1,7 @@
+import MobileMenu from './modules/MobileMenu.js';
+import AnimateNumber from './modules/animateNumber.js';
+
+
+const mobilemenu = new MobileMenu();
+const animateNumber = new AnimateNumber();
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJmaWxlIjoiYXBwLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IE1vYmlsZU1lbnUgZnJvbSAnLi9tb2R1bGVzL01vYmlsZU1lbnUuanMnO1xuaW1wb3J0IEFuaW1hdGVOdW1iZXIgZnJvbSAnLi9tb2R1bGVzL2FuaW1hdGVOdW1iZXIuanMnO1xuXG5cbmNvbnN0IG1vYmlsZW1lbnUgPSBuZXcgTW9iaWxlTWVudSgpO1xuY29uc3QgYW5pbWF0ZU51bWJlciA9IG5ldyBBbmltYXRlTnVtYmVyKCk7Il19
