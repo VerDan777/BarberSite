@@ -1,11 +1,15 @@
 const webpack =require('webpack');
 const path=require('path');
 
+const PATHS = {
+    dist:path.join(__dirname,'dist'),
+    src: path.join(__dirname,'src')
+}
 module.exports= {
-    entry:path.resolve(__dirname,'./src/js/app.js'),
+    entry:PATHS.src + '/js/app.js',
     output: {
-        path:path.resolve(__dirname,'dist/'),
-        filename:'App.js'
+        path:PATHS.dist,
+        filename:'[name].js'
     },
     module:{
       loaders:[{
