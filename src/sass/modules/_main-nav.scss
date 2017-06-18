@@ -46,8 +46,10 @@
         // visual
         cursor: pointer;
 
-        @include atTabletsLandscape {
+        @include atDesktop {
+
             // box model
+
             display: none;
         }
 

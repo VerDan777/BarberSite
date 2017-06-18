@@ -19,7 +19,7 @@
 
   $.gulp.task('default',$.gulp.series(
 
-    //   'clean',
+        // 'clean',
       $.gulp.parallel (
           'sass',
           'pug',
