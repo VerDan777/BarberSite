@@ -6,9 +6,11 @@ head
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(rel="stylesheet", href="styles.css")
     link(href="https://fonts.googleapis.com/css?family=Quattrocento+.." rel="stylesheet")
+    link(rel="stylesheet", href="owl.carousel.css")
+    //- link(rel="stylesheet", href="owl.theme.default.min.css")
     title Document
 body 
-        header.site-header
+        header.site-header.owl-lazy(data-src="./img/main-bg.png")
         nav.main-nav: .wrapper
                  .main-nav__logo
                     img.main-nav__logo--logo(src="img/logo.png" alt="logo")
@@ -110,16 +112,19 @@ body
         section.barbers: .wrapper
             h1.barbers__title Our barbers
             p.barbers__text Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            mixin barber(imgURL,title,text)
-                .barbers__block
-                    img(src=imgURL).barbers__img
-                    h2.barbers__title-block=title
-                    p.barbers__text-block=text
-            
-            +barber('./img/DG.png','Darrel Gibbs','Sed ut perspiciatis unde omnis iste natus error sit voluptateum accusantum')
-            +barber('./img/DC.png','David Clarke','Sed ut perspiciatis unde omnis iste natus error sit voluptateum accusantum')
-            +barber('./img/RO.png','Richard Owens','Sed ut perspiciatis unde omnis iste natus error sit voluptateum accusantum')
-                    
+            .barbers__block-wrapper.owl-carousel
+                mixin barber(imgURL,title,text)
+                        .barbers__block
+                            img(src=imgURL).barbers__img
+                            h2.barbers__title-block=title
+                            p.barbers__text-block=text
+                
+                +barber('./img/DG.png','Darrel Gibbs','Sed ut perspiciatis unde omnis iste natus error sit voluptateum accusantum')
+                +barber('./img/DC.png','David Clarke','Sed ut perspiciatis unde omnis iste natus error sit voluptateum accusantum')
+                +barber('./img/RO.png','Richard Owens','Sed ut perspiciatis unde omnis iste natus error sit voluptateum accusantum')
+                //- +barber('./img/RO.png','Richard Owens','Sed ut perspiciatis unde omnis iste natus error sit voluptateum accusantum')
+                //- +barber('./img/RO.png','Richard Owens','Sed ut perspiciatis unde omnis iste natus error sit voluptateum accusantum')
+                //- +barber('./img/RO.png','Richard Owens','Sed ut perspiciatis unde omnis iste natus error sit voluptateum accusantum')     
         section.clients: .wrapper
             h1.clients__title Our Clients say
             p.clients__text Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium do oremque  laucantium totam rem aperiam
@@ -275,7 +280,10 @@ body
                             a(href="http://google.com"): img(src="./img/google.png" alt="google plus").site-footer__social__img
                             a(href="htttp://twitter.com"): img(src="./img/twitter.png" alt="twitter").site-footer__social__img.site-footer__social__img--tw
                             a(href="http://instagram.com"): img(src="./img/instagram.png" alt="in").site-footer__social__img.site-footer__social__img--in
-                            a(href="http://facebook.com"): img(src="./img/facebook.png" alt="fb").site-footer__social__img.site-footer__social__img--fb            
+                            a(href="http://facebook.com"): img(src="./img/facebook.png" alt="fb").site-footer__social__img.site-footer__social__img--fb 
         
+script(src="https://code.jquery.com/jquery-3.2.1.min.js")         
+script(src="owl.carousel.min.js") 
+script(src='carousel.js')       
 script(src="main.js")
     

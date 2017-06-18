@@ -9,12 +9,6 @@
         text-align: center;
         text-transform: uppercase;
         &::after {
-            // content: '';
-            // position: absolute;
-            // top: 70px;
-            // left: 41%;
-            // border: 0.5px solid #985336;
-            // width: 110px;
         content: '';
         background: url(./img/mustache.png);
         background-repeat: no-repeat;
