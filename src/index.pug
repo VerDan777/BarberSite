@@ -153,37 +153,91 @@ body
                 +gallery('./img/DG.png')
                 +gallery('./img/DG.png')    
 
-        section.price
+        section.price: .wrapper
             h1.price__title Our price
             p.price__text Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium do oremque  laucantium totam rem aperiam         
             .price__block
                 .price__gender-block 
-                    h1.price__gender-block__name Men
-                mixin table-item(itemName,itemPrice)
-                    tr.table-item
-                        td.table-item=itemName
-                        td.table-item=itemPrice
+                    h1.price__gender-block__name Man
+                    table.table
+                        tr.table-row 
+                            td Hair cut
+                            td.table__td 15$
+
+                        tr.table-row 
+                            td Hair cut
+                            td.table__td 15$
+
+                        tr.table-row 
+                            td Hair cut
+                            td.table__td 15$
+
+                        tr.table-row 
+                            td Hair cut
+                            td.table__td 15$
+
+                        tr.table-row 
+                            td Hair cut
+                            td.table__td 15$
+
+                        tr.table-row 
+                            td Hair cut
+                            td.table__td 15$
+                    h1.price__gender-block__name Appointment
+
+                .price__gender-block
+                    
+                    h1.price__gender-block__name.price__gender-block__name--ginger Man
+                    table.table
+                        tr.table-row 
+                            td Hair cut
+                            td.table__td 15$
+
+                        tr.table-row 
+                            td Hair cut
+                            td.table__td 15$
+
+                        tr.table-row 
+                            td Hair cut
+                            td.table__td 15$
+
+                        tr.table-row 
+                            td Hair cut
+                            td.table__td 15$
+
+                        tr.table-row 
+                            td Hair cut
+                            td.table__td 15$
+
+                        tr.table-row 
+                            td Hair cut
+                            td.table__td 15$
+                    h1.price__gender-block__name.price__gender-block__name--ginger Appointment
+                //- mixin table-item(itemName,itemPrice)
+                //-     tr.table__item
+                //-         td.table__item=itemName
+                //-         td.table__item=itemPrice
                 
-                +table-item('Hair cut','15$')
-                +table-item('Hair wash','12$')
-                +table-item('Hair styiling','20$')
-                +table-item('Face shave','15$')
-                +table-item('Head shave','15$')
-                +table-item('Head shave','15$')
+                //- +table-item('Hair cut','15$')
+                //- +table-item('Hair wash','12$')
+                //- +table-item('Hair styiling','20$')
+                //- +table-item('Face shave','15$')
+                //- +table-item('Head shave','15$')
+                //- +table-item('Head shave','15$')
                     h1.price__appointment
-                .price__gender-block 
-                     h1.price__gender-block__name Woman
-                mixin table-item(itemName,itemPrice)
-                    tr.table-item
-                        td.table-item=itemName
-                        td.table-item=itemPrice
+                //- .price__gender-block 
+                //-      h1.price__gender-block__name Woman
+                //- mixin table-item(itemName,itemPrice)
+                //-     tr.table-item
+                //-         td.table-item=itemName
+                //-         td.table-item=itemPrice
                 
-                +table-item('Hair cut','15$')
-                +table-item('Hair wash','12$')
-                +table-item('Hair styiling','20$')
-                +table-item('Face shave','15$')
-                +table-item('Head shave','15$')
-                +table-item('Head shave','15$')
+                //- +table-item('Hair cut','15$')
+                //- +table-item('Hair wash','12$')
+                //- +table-item('Hair styiling','20$')
+                //- +table-item('Face shave','15$')
+                //- +table-item('Head shave','15$')
+                //- +table-item('Head shave','15$')
                      h1.price__appointment
         
         footer.site-footer: .wrapper

@@ -1,0 +1,15 @@
+.table {
+    
+    display: table;
+    padding:30px 25px;
+     box-shadow: -1px -1px 0px 0px  #c6c6c6;
+  
+
+    &__td{
+        padding-left:225px;
+    }
+    td {
+        padding-top:15px;
+        padding-bottom: 15px;
+    }
+}
