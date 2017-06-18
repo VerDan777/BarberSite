@@ -226,37 +226,48 @@ body
                             button(type='submit').button--footer: img(src="./img/send.png")
                     .site-footer__schedule
                         h1.site-footer__schedule-title Working Hours
-                        p.site-footer__schedule-text At vero eos accusamus et iusto odio dignissimos doloremque qui blandtitits
-                        mixin footer-table-item(NameDay,time)
-                            tr 
-                                td.footer-table-item=NameDay
-                                td.footer-table-item=time
-
-                        +footer-table-item('MON','9.00-18.00')
-                        +footer-table-item('TUE','9.00-18.00')
-                        +footer-table-item('WED','9.00-18.00')
-                        +footer-table-item('THU','9.00-18.00')
-                        +footer-table-item('FRI','9.00-16.00')
-                        +footer-table-item('SAT','10.00-14.00')
-                        +footer-table-item('SUN','Output')
+                        table.site-footer__table
+                            tr.site-footer__table-row
+                                td MON
+                                td.site-footer__table-td  9.00-18.00
+                            tr.site-footer__table-row
+                                td TUE
+                                td.site-footer__table-td  9.00-18.00
+                            tr.site-footer__table-row
+                                td WED
+                                td.site-footer__table-td  9.00-18.00
+                            tr.site-footer__table-row
+                                td THU 
+                                td.site-footer__table-td 9.00-18.00 
+                            tr.site-footer__table-row
+                                td FRI
+                                td.site-footer__table-td  9.00-18.00 
+                            tr.site-footer__table-row
+                                td SAT 
+                                td.site-footer__table-td  10.00-14.00 
+                            tr.site-footer__table-row
+                                td SUN
+                                td.site-footer__table-td  Output
+                            
 
                     .site-footer__blog
                         h1.site-footer__blog-title Latest From Blog
                         mixin blog(title,text)
                             .site-footer__blog-container
                                 h3.site-footer__blog-container-title=title
-                                p.site-foote__blog-container-text=text 
+                                p.site-footer__blog-container-text=text 
                         +blog('Lorem ipsum dolore','Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium do oremque  laucantium totam rem aperiam')
                         +blog('Lorem ipsum dolore','Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium do oremque  laucantium totam rem aperiam ')
 
                     .site-footer__instagram
                         h1.site-footer__instagram-title Instagram
-                        img(src="./img/1.png").site-footer__instagram-img 
-                        img(src="./img/1.png").site-footer__instagram-img 
-                        img(src="./img/1.png").site-footer__instagram-img 
-                        img(src="./img/1.png").site-footer__instagram-img 
-                        img(src="./img/1.png").site-footer__instagram-img 
-                        img(src="./img/1.png").site-footer__instagram-img 
+                        img(src="./img/boxIn.png").site-footer__instagram-img 
+                        img(src="./img/man-portraitin.png").site-footer__instagram-img 
+                        img(src="./img/manChairIn.png").site-footer__instagram-img 
+                        br
+                        img(src="./img/furnitureIn.png").site-footer__instagram-img 
+                        img(src="./img/manIn.png").site-footer__instagram-img 
+                        img(src="./img/scissorsIn.png").site-footer__instagram-img 
 
                     h1.site-footer__copyright Copyright 2017 Barber.All rights reserved
                     .site-footer__social-block

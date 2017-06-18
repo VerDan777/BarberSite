@@ -1,17 +1,19 @@
 .site-footer {
     margin-top:150px; 
     background-image: url('./img/footer-bg.png');
+    background-position: center center;
+    background-origin: cover; 
     width: 100%;
     height: 600px;
-    // background-color: $ginger;
-    position: absolute;
-    bottom: 0;
+    
+    // position: absolute;
+    // bottom: 0;
     position: relative;
-    &__content {
+&__content {
         padding-top:150px; 
     }
 
-    &__subscribe {
+&__subscribe {
         
         display:inline-block;
         width: 263px;
@@ -34,10 +36,12 @@
         color:$white;
         font-weight: 200;
         padding-bottom: 50px;
+        padding-top:50px;
 
     }
     &__input-wrapper{
         position: relative;
+        width: 210px;
     
     }
     &__input {
@@ -47,24 +51,84 @@
         @include Outline;
         
     }
-    &__schedule {
+&__schedule {
 
         display: inline-block;
         margin-left :15px;
         margin-right: 15px;
-        width: 300px;
+        width: 263px;
+        height: 325px;
+         vertical-align: top;
+        // position: absolute;
+
 
     }
 
     &__schedule-title {
+        display: inline-block;
         color:$ginger;
         font-size: 1.5rem;
         font-family: $mainFont;
         font-weight:500;
         text-transform: uppercase;
-        padding-bottom: 70px;
+        padding-bottom: 50px;
+        // margin-bottom: 25px;
+    }
+    &__table {
+        color:$white;
+        font-weight:400;
+    }
+    &__table-td {
+        padding-left :75px;
     }
 
+&__blog {
+
+    display: inline-block;
+    width: 263px;
+    margin-left:15px;
+    margin-right:15px;
+     vertical-align: top;
+    // position: absolute;
+
+    }
+    &__blog-title {
+        color:$ginger;
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-family: $mainFont;
+        padding-bottom: 70px;
+    }
+    &__blog-container-title {
+        color:$ginger;
+        font-size: 1rem;
+
+    }
+    &__blog-container-text {
+
+        color:$white;
+    }
+    &__instagram {
+        display:inline-block;
+        vertical-align: top;
+    }
+    &__instagram-title {
+        color:$ginger;
+        // display: inline-block;
+        text-align: right;
+        font-weight: 500;
+        font-size: 1.5rem;
+        padding-bottom: 170px;
+
+    }
+ 
+    img {
+        width: 50px;
+        height: 50px;
+        margin:0px 10px;
+       
+    }
 
 
 
