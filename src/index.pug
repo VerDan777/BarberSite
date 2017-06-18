@@ -213,79 +213,57 @@ body
                             td Hair cut
                             td.table__td 15$
                     h1.price__gender-block__name.price__gender-block__name--ginger Appointment
-                //- mixin table-item(itemName,itemPrice)
-                //-     tr.table__item
-                //-         td.table__item=itemName
-                //-         td.table__item=itemPrice
-                
-                //- +table-item('Hair cut','15$')
-                //- +table-item('Hair wash','12$')
-                //- +table-item('Hair styiling','20$')
-                //- +table-item('Face shave','15$')
-                //- +table-item('Head shave','15$')
-                //- +table-item('Head shave','15$')
-                    h1.price__appointment
-                //- .price__gender-block 
-                //-      h1.price__gender-block__name Woman
-                //- mixin table-item(itemName,itemPrice)
-                //-     tr.table-item
-                //-         td.table-item=itemName
-                //-         td.table-item=itemPrice
-                
-                //- +table-item('Hair cut','15$')
-                //- +table-item('Hair wash','12$')
-                //- +table-item('Hair styiling','20$')
-                //- +table-item('Face shave','15$')
-                //- +table-item('Head shave','15$')
-                //- +table-item('Head shave','15$')
-                     h1.price__appointment
+         
         
-        footer.site-footer: .wrapper
-            .site-footer__subscribe 
-                h1.site-footer__subscribe-title Subscribe
-                p.site-footer__subscribe-text At vero eos accusamus et iusto odio dignissimos doloremque qui blandtitits
-                input(type="text" placeholder="Your E-mail")
-                button.button--footer
-            .site-footer__schedule
-                h1.site-footer__schedule-title Working Hours
-                p.site-footer__schedule-text At vero eos accusamus et iusto odio dignissimos doloremque qui blandtitits
-                mixin footer-table-item(NameDay,time)
-                    tr 
-                        td.footer-table-item=NameDay
-                        td.footer-table-item=time
+        footer.site-footer
+            .wrapper
+                .site-footer__content 
+                    .site-footer__subscribe 
+                        h1.site-footer__subscribe-title Subscribe
+                        p.site-footer__subscribe-text At vero eos accusamus et iusto odio dignissimos doloremque qui blandtitits
+                        .site-footer__input-wrapper
+                            input.site-footer__input(type="text" placeholder="Your E-mail")
+                            button(type='submit').button--footer: img(src="./img/send.png")
+                    .site-footer__schedule
+                        h1.site-footer__schedule-title Working Hours
+                        p.site-footer__schedule-text At vero eos accusamus et iusto odio dignissimos doloremque qui blandtitits
+                        mixin footer-table-item(NameDay,time)
+                            tr 
+                                td.footer-table-item=NameDay
+                                td.footer-table-item=time
 
-                +footer-table-item('MON','9.00-18.00')
-                +footer-table-item('TUE','9.00-18.00')
-                +footer-table-item('WED','9.00-18.00')
-                +footer-table-item('THU','9.00-18.00')
-                +footer-table-item('FRI','9.00-16.00')
-                +footer-table-item('SAT','10.00-14.00')
-                +footer-table-item('SUN','Output')
+                        +footer-table-item('MON','9.00-18.00')
+                        +footer-table-item('TUE','9.00-18.00')
+                        +footer-table-item('WED','9.00-18.00')
+                        +footer-table-item('THU','9.00-18.00')
+                        +footer-table-item('FRI','9.00-16.00')
+                        +footer-table-item('SAT','10.00-14.00')
+                        +footer-table-item('SUN','Output')
 
-            .site-footer__blog
-                h1.site-footer__blog-title Latest From Blog
-                mixin blog(title,text)
-                    .site-footer__blog-container
-                        h3.site-footer__blog-container-title=title
-                        p.site-foote__blog-container-text=text 
-                +blog('Lorem ipsum dolore','Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium do oremque  laucantium totam rem aperiam')
-                +blog('Lorem ipsum dolore','Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium do oremque  laucantium totam rem aperiam ')
+                    .site-footer__blog
+                        h1.site-footer__blog-title Latest From Blog
+                        mixin blog(title,text)
+                            .site-footer__blog-container
+                                h3.site-footer__blog-container-title=title
+                                p.site-foote__blog-container-text=text 
+                        +blog('Lorem ipsum dolore','Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium do oremque  laucantium totam rem aperiam')
+                        +blog('Lorem ipsum dolore','Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium do oremque  laucantium totam rem aperiam ')
 
-            .site-footer__instagram
-                h1.site-footer__instagram-title Instagram
-                img(src="./img/1.png").site-footer__instagram-img 
-                img(src="./img/1.png").site-footer__instagram-img 
-                img(src="./img/1.png").site-footer__instagram-img 
-                img(src="./img/1.png").site-footer__instagram-img 
-                img(src="./img/1.png").site-footer__instagram-img 
-                img(src="./img/1.png").site-footer__instagram-img 
+                    .site-footer__instagram
+                        h1.site-footer__instagram-title Instagram
+                        img(src="./img/1.png").site-footer__instagram-img 
+                        img(src="./img/1.png").site-footer__instagram-img 
+                        img(src="./img/1.png").site-footer__instagram-img 
+                        img(src="./img/1.png").site-footer__instagram-img 
+                        img(src="./img/1.png").site-footer__instagram-img 
+                        img(src="./img/1.png").site-footer__instagram-img 
 
-            h1.site-footer__copyright Copyright 2017 Barber.All rights reserved
-            .site-footer__social-block
-                img(src="./img/1.png" alt="google plus").site-footer__social__img
-                img(src="./img/2.png" alt="twitter").site-footer__social__img
-                img(src="./img/3.png" alt="in").site-footer__social__img
-                img(src="./img/4.png" alt="fb").site-footer__social__img
+                    h1.site-footer__copyright Copyright 2017 Barber.All rights reserved
+                    .site-footer__social-block
+                        img(src="./img/1.png" alt="google plus").site-footer__social__img
+                        img(src="./img/2.png" alt="twitter").site-footer__social__img
+                        img(src="./img/3.png" alt="in").site-footer__social__img
+                        img(src="./img/4.png" alt="fb").site-footer__social__img
                 
         
 script(src="main.js")

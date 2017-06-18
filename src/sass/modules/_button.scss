@@ -23,3 +23,15 @@ a {
         background-color:none; 
         
     }
+.button--footer {
+    position: absolute;
+    right: 0;
+    top:0;
+    background-color:$ginger;
+    width: 56px;
+    height: 40px;
+    padding:5px 5px;
+    background-image: url(''); 
+   @include Outline;
+   border:none;
+}

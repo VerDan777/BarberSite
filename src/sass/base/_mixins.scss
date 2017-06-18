@@ -24,3 +24,11 @@
         @content;
     }
 }
+
+
+//Styling mixins
+
+@mixin Outline {
+
+    outline: none;
+} 
