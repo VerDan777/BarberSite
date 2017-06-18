@@ -1,11 +1,12 @@
 $(document).ready(function () {
-  $(".barbers__block-wrapper  ").owlCarousel({
+  $(".barbers__block-wrapper,.gallery__image-wrapper").owlCarousel({
         autoplay:true,
         autoplayTimeout:2000,
         nav:true,
         navText: ["<img src='myprevimage.png'>","<img src='mynextimage.png'>"],
 		loop:true,
 		margin:20,
+        lazyLoad:true,
 		 responsive:{
 				0:{
 					items:1,
@@ -23,9 +24,9 @@ $(document).ready(function () {
 		992:{
 			items:3,
 	},
-			// 1200:{
-			// items:4,
-			// }
+			
 	}
-	});
 });
+})
+
+
