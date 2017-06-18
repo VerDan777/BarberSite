@@ -10,7 +10,7 @@ head
     //- link(rel="stylesheet", href="owl.theme.default.min.css")
     title Document
 body 
-        header.site-header.owl-lazy(data-src="./img/main-bg.png")
+        header.site-header
         nav.main-nav: .wrapper
                  .main-nav__logo
                     img.main-nav__logo--logo(src="img/logo.png" alt="logo")
@@ -122,25 +122,23 @@ body
                 +barber('./img/DG.png','Darrel Gibbs','Sed ut perspiciatis unde omnis iste natus error sit voluptateum accusantum')
                 +barber('./img/DC.png','David Clarke','Sed ut perspiciatis unde omnis iste natus error sit voluptateum accusantum')
                 +barber('./img/RO.png','Richard Owens','Sed ut perspiciatis unde omnis iste natus error sit voluptateum accusantum')
-                //- +barber('./img/RO.png','Richard Owens','Sed ut perspiciatis unde omnis iste natus error sit voluptateum accusantum')
-                //- +barber('./img/RO.png','Richard Owens','Sed ut perspiciatis unde omnis iste natus error sit voluptateum accusantum')
-                //- +barber('./img/RO.png','Richard Owens','Sed ut perspiciatis unde omnis iste natus error sit voluptateum accusantum')     
+               
         section.clients: .wrapper
             h1.clients__title Our Clients say
             p.clients__text Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium do oremque  laucantium totam rem aperiam
-            button.button__round--bgnone <
-            button.button__round--bg >
-            mixin client(iconURL,text)
-                .clients__block
-                    p.clients__say=text
-                    img(src=iconURL).clients__img
-            
-            +client('./img/GM.png','Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque l audantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur')
-        
+            .clients__block-wrapper.owl-carousel
+                mixin client(iconURL,text)
+                    .clients__block
+                        p.clients__say=text
+                        img(src=iconURL).clients__img
+                +client('./img/GM.png','Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque l audantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur')
+                //- +client('./img/GM.png','Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque l audantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur')
+                //- +client('./img/GM.png','Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque l audantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur')
+
         section.gallery
             h1.gallery__title Our Gallery
             p.gallery__text Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium do oremque  laucantium totam rem aperiam
-            .gallery__image-wrapper
+            .gallery__image-wrapper.owl-carousel
                 mixin gallery(imgURL)
                     img(src=imgURL).gallery__img
                     
@@ -149,9 +147,6 @@ body
                 +gallery('./img/DG.png')
                 +gallery('./img/DG.png')
                 +gallery('./img/DG.png')
-            .gallery__image-wrapper1
-                mixin gallery(imgURL)
-                    img(src=imgURL).gallery__img
                 +gallery('./img/DG.png')
                 +gallery('./img/DG.png')
                 +gallery('./img/DG.png')
@@ -283,7 +278,9 @@ body
                             a(href="http://facebook.com"): img(src="./img/facebook.png" alt="fb").site-footer__social__img.site-footer__social__img--fb 
         
 script(src="https://code.jquery.com/jquery-3.2.1.min.js")         
-script(src="owl.carousel.min.js") 
-script(src='carousel.js')       
+script(src="./libs/owl.carousel.min.js") 
+script(src="./libs/jquery.waypoints.min.js")
+script(src='carousel.js')   
+script(src="waypoint.js")    
 script(src="main.js")
     

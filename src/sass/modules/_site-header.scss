@@ -2,6 +2,7 @@
     position: relative;
 
     &__greeting{
+        
     @include atDesktop {
     max-width: 100%;
     background-position: center center;
