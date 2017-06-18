@@ -3,12 +3,48 @@
     margin-top:150px;
     margin-bottom: 150px;
     text-align: center;
+
     &__title {
         text-align: center;
         font-family: $mainFont;
         color:#212121;
         font-size: 2rem;
         text-transform: uppercase;
+        position: relative;
+
+        // &::before {
+        //     content:'';
+        //     border:3px solid $ginger;
+        //     border-left: none;
+        //     border-right:none;
+        //     border-bottom:none;
+        //     position: absolute;
+        //     top:61px;
+        //     left:45%;
+        //     width: 88px;
+        //     height: 50px;
+        //     // text-align: left;
+
+        // }
+
+        &::after {
+            content:'';
+            background: url('./img/mustache.png');
+           background-repeat: no-repeat;
+           background-position:center center;
+           background-origin: cover;
+           width: 100px;
+           height: 100px; 
+           display: inline-block;
+           text-align: center;
+           position: absolute;
+           top:10px;
+           left:0px;
+           right: 0px;
+           margin: auto;
+           
+       
+        }
 
     } 
     &__text {
@@ -18,7 +54,7 @@
         font-family: $mainFont;
         font-weight: 300;
         text-align: center;
-        padding-top:25px;
+        padding-top:50px;
 
     }
     &__block {
@@ -39,9 +75,13 @@
     &__title-block {
         text-align: center;
         vertical-align: middle;
-        &::before {
+        &::after {
 
-            content: ''
+            content: '';
+            // background-image:url('./img/stars4full.png');
+            
+           
+            
         }
     }
     &__text-block {
