@@ -22,6 +22,10 @@
         margin-bottom: 50px; 
         text-align: center;
 
+        @include atTabletsPortrait {
+            
+        }
+
         
 
     }
@@ -42,33 +46,39 @@
         padding-bottom: 50px;
         padding-top:50px;
         text-align: center;
-        width: 213px;
+        // width: 213px;
+        @include atTabletsPortrait {
+
+            width: 213px;
+        }
 
     }
     &__input-wrapper{
         position: relative;
-        width: 210px;
+        // width: 210px;
     
     }
     &__input {
 
         height: 40px;
-        width: 210px;
-       margin: 0 auto;
+        // width: 210px;
+        margin: 0 auto;
         @include Outline;
         
     }
 &__schedule {
 
-        display: inline-block;
-        margin-left :15px;
-        margin-right: 15px;
+        display: block;
         // width: 263px;
         height: 325px;
         vertical-align: top;
         text-align:center;
         // margin: 0 auto;
         // position: absolute;
+        @include atTabletsPortrait {
+
+            display: inline-block;
+        }
 
 
     }
@@ -88,6 +98,8 @@
     &__table {
         color:$white;
         font-weight:400;
+        text-align: center;
+        margin: auto;
     }
     &__table-td {
         padding-left :75px;
@@ -96,13 +108,14 @@
 &__blog {
 
     display:block;
-    // width: 263px;
-    // margin-left:15px;
-    // margin-right:15px;
     margin:0 auto;
     margin-bottom: 50px;
     vertical-align: top;
     // position: absolute;
+    @include atTabletsPortrait{
+        width: 263px;
+        display: inline-block;
+    }
 
     }
     &__blog-title {
