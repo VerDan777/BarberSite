@@ -24,7 +24,8 @@
           'sass',
           'pug',
           'js',
-          'copyImg'
+          'copyImg',
+          'copyLibs'
       ),
       $.gulp.parallel (
         'watch',

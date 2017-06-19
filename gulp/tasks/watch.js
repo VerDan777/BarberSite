@@ -7,5 +7,6 @@ module.exports = function() {
     $.gulp.watch('./src/sass/**/*.scss', $.gulp.series('sass'));
     $.gulp.watch('./src/*.pug', $.gulp.series('pug'));
     $.gulp.watch('./src/img/**/*.*', $.gulp.series('copyImg'));
+    $.gulp.watch('./src/libs/*.*', $.gulp.series('copyLibs'));
   });
 };
