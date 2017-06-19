@@ -8,6 +8,7 @@ head
     link(href="https://fonts.googleapis.com/css?family=Quattrocento+.." rel="stylesheet")
     link(rel="stylesheet", href="owl.carousel.css")
     link(rel="stylesheet", href="owl.theme.default.min.css")
+    link(rel="stylesheet", href="magnific-popup.css")
     title Document
 body 
         header.site-header
@@ -108,7 +109,8 @@ body
             .barbers__block-wrapper.owl-carousel
                 mixin barber(imgURL,title,text)
                         .barbers__block
-                            img(src=imgURL).barbers__img
+                            a(href=imgURL)
+                                img(src=imgURL).barbers__img
                             h2.barbers__title-block=title
                             p.barbers__text-block=text
                 
@@ -133,8 +135,9 @@ body
             p.gallery__text Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium do oremque  laucantium totam rem aperiam
             .gallery__image-wrapper.owl-carousel
                 mixin gallery(imgURL)
-                    img(src=imgURL).gallery__img
-                    
+                    a(href='./img/DG.png')
+                        img(src=imgURL).gallery__img
+    
                 +gallery('./img/DG.png')
                 +gallery('./img/DG.png')
                 +gallery('./img/DG.png')
@@ -272,6 +275,8 @@ body
         
 script(src="https://code.jquery.com/jquery-3.2.1.min.js")         
 script(src="owl.carousel.min.js") 
+script(src="./libs/jquery.magnific-popup.min.js")
+script(src="magnificpopup.js")
 script(src='carousel.js')    
 script(src="main.js")
     

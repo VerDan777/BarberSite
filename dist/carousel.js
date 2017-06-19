@@ -9,7 +9,7 @@ $(document).ready(function () {
         lazyLoad:true,
 		 responsive:{
 				0:{
-					items:1,
+				items:1,
 					},
 		520:{
 				items:1,
