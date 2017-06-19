@@ -46,12 +46,12 @@
         // visual
         cursor: pointer;
 
-        @include atDesktop {
+        @include atTabletsLandscape {
 
             // box model
-
             display: none;
         }
+    
 
         &::before {
             content: "";

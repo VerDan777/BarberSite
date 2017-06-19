@@ -18,7 +18,9 @@
   "homepage": "https://github.com/VerDan777/BarberSite#readme",
   "dependencies": {
     "jquery": "^3.2.1",
+    "magnific-popup": "^1.1.0",
     "normalize.css": "^7.0.0",
+    "owl.carousel": "^2.2.0",
     "waypoints": "^4.0.1"
   },
   "devDependencies": {
