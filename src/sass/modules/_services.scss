@@ -1,21 +1,32 @@
 .services {
-
-    background-image: url('./img/bg-services.png');
-    height: 950px;
+   
     background-position:center center;
     background-size:cover;
     background-repeat: no-repeat;  
     margin-top:150px; 
     position: relative;
-    // @include atSmall {
-    //     background-image:none; 
-    // }
+
+     
+     @include atTabletsPortrait {
+         background-image: url('/img/bg-services.png');
+         height: 950px;
+
+
+     }
     &__container {
-        margin-top:130px; 
+        margin-top:60px; 
         position: relative;
+
+        @include atTabletsPortrait {
+            margin-top:130px; 
+        }
+    }
+    &__text {
+        padding:0 0px;
     }
 
     &__title {
+
         text-align: center;
         text-transform: uppercase;
         font-family: '$mainFont',sans-serif;
@@ -47,24 +58,45 @@
     &__info-block {
         
         display: block;
-        width: 250px;
-        // text-align: right;
-        margin-top:100px; 
-        &--left{
-            position: absolute;
-            left:50;
+        text-align: center;
+         margin-top:50px;
+         margin-bottom: 50px;
+         line-height: 1.5; 
+        &--left {
+         
+             @include atTabletsPortrait {
+
+                    position: absolute;
+                    left:50;
+                }
         }
         &--right  {
-            position: absolute;
-            right:0;
+           
+
+             @include atTabletsPortrait {
+
+                position: absolute;
+                right:0;
         }
+
+        }
+            @include atTabletsPortrait {
+            width: 250px;
+            margin-bottom: 100px;
+
+            }
     }
     &__icon {
         width: 50px;
         height: 50px;
     }
     &__title-block  {
-        text-align: left;
+        text-align: center;
+
+        @include atTabletsPortrait {
+
+               text-align: left;
+        }
     }
 
 }
