@@ -16,6 +16,7 @@
     &__container {
         margin-top:60px; 
         position: relative;
+        padding: 0 30px;
 
         @include atTabletsPortrait {
             margin-top:130px; 
